@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is the set of features required for a camera2 device that supports raw sensor output -->
+<permissions>
+  <feature name="android.hardware.camera.any" />
+  <feature name="android.hardware.camera.capability.raw" />
+</permissions>
