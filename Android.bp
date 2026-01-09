@@ -32,7 +32,7 @@ android_app_import {
 
 cc_prebuilt_library_shared {
     name: "libArcsoft_Avatar_Jni",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libArcsoft_Avatar_Jni.so"],
             shared_libs: [
@@ -55,7 +55,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libAvatarEngine",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libAvatarEngine.so"],
             shared_libs: [
@@ -79,7 +79,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libCameraEffectJNI",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libCameraEffectJNI.so"],
             shared_libs: [
@@ -108,7 +108,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libSNPE",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libSNPE.so"],
             shared_libs: [
@@ -129,7 +129,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarc_layer_sgl",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarc_layer_sgl.so"],
             shared_libs: [
@@ -148,7 +148,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_deflicker",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_deflicker.so"],
             shared_libs: [
@@ -167,7 +167,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_single_chart_calibration",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libarcsoft_single_chart_calibration.so"],
             shared_libs: [
@@ -201,7 +201,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_sn_mtk_apu",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_sn_mtk_apu.so"],
             shared_libs: [
@@ -220,7 +220,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_super_night_raw_mpbase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_super_night_raw_mpbase.so"],
             shared_libs: [
@@ -236,7 +236,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_super_night_raw_mtk",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_super_night_raw_mtk.so"],
             shared_libs: [
@@ -257,7 +257,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_supernight_jni",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_supernight_jni.so"],
             shared_libs: [
@@ -282,7 +282,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libarcsoft_wideselfie",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_wideselfie.so"],
             shared_libs: [
@@ -302,7 +302,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libc++_shared",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libc++_shared.so"],
             shared_libs: [
@@ -319,7 +319,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera2ndk",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera2ndk.so"],
             shared_libs: [
@@ -369,7 +369,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_960_mpbase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_960_mpbase.so"],
             shared_libs: [
@@ -385,7 +385,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_arcsoft_beautyshot",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_arcsoft_beautyshot.so"],
             shared_libs: [
@@ -405,7 +405,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_arcsoft_handgesture",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_arcsoft_handgesture.so"],
             shared_libs: [
@@ -428,7 +428,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_beauty_mpbase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_beauty_mpbase.so"],
             shared_libs: [
@@ -444,7 +444,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_chroma_nr",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_chroma_nr.so"],
             shared_libs: [
@@ -479,7 +479,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_client",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera_client.so"],
             shared_libs: [
@@ -521,7 +521,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_handgesture_mpbase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_handgesture_mpbase.so"],
             shared_libs: [
@@ -537,7 +537,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_metadata",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera_metadata.so"],
             shared_libs: [
@@ -569,7 +569,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_sound_effect",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_sound_effect.so"],
             shared_libs: [
@@ -589,7 +589,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcamera_wideselfie_mpbase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_wideselfie_mpbase.so"],
             shared_libs: [
@@ -605,7 +605,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcameraservice",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcameraservice.so"],
             shared_libs: [
@@ -707,7 +707,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcom.xiaomi.camera.algojni",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcom.xiaomi.camera.algojni.so"],
             shared_libs: [
@@ -751,7 +751,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcom.xiaomi.camera.mianodejni",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcom.xiaomi.camera.mianodejni.so"],
             shared_libs: [
@@ -797,7 +797,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libcom.xiaomi.camera.requestutil",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcom.xiaomi.camera.requestutil.so"],
             shared_libs: [
@@ -818,7 +818,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libdeflicker_jni",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libdeflicker_jni.so"],
             shared_libs: [
@@ -840,7 +840,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libfenshen",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libfenshen.so"],
             shared_libs: [
@@ -865,7 +865,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libffmpeg",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libffmpeg.so"],
             shared_libs: [
@@ -888,7 +888,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libhandengine.arcsoft",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libhandengine.arcsoft.so"],
             shared_libs: [
@@ -910,7 +910,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_arcsoft_beautyshot",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_arcsoft_beautyshot.so"],
             shared_libs: [
@@ -933,7 +933,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_blurbuster",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_blurbuster.so"],
             shared_libs: [
@@ -955,7 +955,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_chromaflash",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_chromaflash.so"],
             shared_libs: [
@@ -977,7 +977,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_dualcamera",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_dualcamera.so"],
             shared_libs: [
@@ -999,7 +999,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_filtergenerator",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_filtergenerator.so"],
             shared_libs: [
@@ -1021,7 +1021,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_hazebuster",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_hazebuster.so"],
             shared_libs: [
@@ -1043,7 +1043,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_imagecodec",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_imagecodec.so"],
             shared_libs: [
@@ -1077,7 +1077,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_jpegutil_xiaomi",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_jpegutil_xiaomi.so"],
             shared_libs: [
@@ -1109,7 +1109,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_load_serinum",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_load_serinum.so"],
             shared_libs: [
@@ -1129,7 +1129,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_optizoom",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_optizoom.so"],
             shared_libs: [
@@ -1151,7 +1151,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_resource_drm",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_resource_drm.so"],
             shared_libs: [
@@ -1171,7 +1171,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_seestraight",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_seestraight.so"],
             shared_libs: [
@@ -1193,7 +1193,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_sharpshooter",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_sharpshooter.so"],
             shared_libs: [
@@ -1215,7 +1215,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_sound_effect",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_sound_effect.so"],
             shared_libs: [
@@ -1234,7 +1234,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_stillmore",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_stillmore.so"],
             shared_libs: [
@@ -1256,7 +1256,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_trueportrait",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_trueportrait.so"],
             shared_libs: [
@@ -1278,7 +1278,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_truescanner_v2",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_truescanner_v2.so"],
             shared_libs: [
@@ -1300,7 +1300,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_ubifocus",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_ubifocus.so"],
             shared_libs: [
@@ -1322,7 +1322,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libjni_wideselfie",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_wideselfie.so"],
             shared_libs: [
@@ -1346,7 +1346,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_avatarengine",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_avatarengine.so"],
             shared_libs: [
@@ -1370,7 +1370,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_bokeh_845_video",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_bokeh_845_video.so"],
             shared_libs: [
@@ -1393,7 +1393,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_jni",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_jni.so"],
             shared_libs: [
@@ -1416,7 +1416,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_soundsupport",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_soundsupport.so"],
             shared_libs: [
@@ -1435,7 +1435,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_tracking",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_tracking.so"],
             shared_libs: [
@@ -1455,7 +1455,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmimoji_video2gif",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_video2gif.so"],
             shared_libs: [
@@ -1482,7 +1482,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmisoundcamerasupport",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmisoundcamerasupport.so"],
             shared_libs: [
@@ -1504,7 +1504,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmiuinative",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmiuinative.so"],
             shared_libs: [
@@ -1538,7 +1538,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmorpho_memory_allocator",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmorpho_memory_allocator.so"],
             shared_libs: [
@@ -1568,7 +1568,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmorpho_panorama_gp3",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmorpho_panorama_gp3.so"],
             shared_libs: [
@@ -1592,7 +1592,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmorpho_sensor_fusion",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmorpho_sensor_fusion.so"],
             shared_libs: [
@@ -1620,7 +1620,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libmulti-wakeup-engine",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmulti-wakeup-engine.so"],
             shared_libs: [
@@ -1639,7 +1639,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "librecord_video",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/librecord_video.so"],
             shared_libs: [
@@ -1664,7 +1664,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libsubtitle_jni",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libsubtitle_jni.so"],
             shared_libs: [
@@ -1696,7 +1696,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libsymphony-cpu",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libsymphony-cpu.so"],
             shared_libs: [
@@ -1716,7 +1716,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libtt_effect",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libtt_effect.so"],
             shared_libs: [
@@ -1742,7 +1742,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libtt_jni",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libtt_jni.so"],
             shared_libs: [
@@ -1774,7 +1774,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libttffmpeg",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttffmpeg.so"],
             shared_libs: [
@@ -1793,7 +1793,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libttvebase",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvebase.so"],
             shared_libs: [
@@ -1821,7 +1821,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libttvideoeditor",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvideoeditor.so"],
             shared_libs: [
@@ -1851,7 +1851,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libttvideorecorder",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvideorecorder.so"],
             shared_libs: [
@@ -1881,7 +1881,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libttyuv",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttyuv.so"],
             shared_libs: [
@@ -1900,7 +1900,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libvideo_extra_color_converter",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvideo_extra_color_converter.so"],
             shared_libs: [
@@ -1922,7 +1922,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libvideo_extra_interpolator",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvideo_extra_interpolator.so"],
             shared_libs: [
@@ -1944,7 +1944,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libvideoutils",
-    arch: {
+    target: {
         android_arm: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libvideoutils.so"],
             shared_libs: [
@@ -1963,7 +1963,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libvvc++_shared",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvvc++_shared.so"],
             shared_libs: [
@@ -1980,7 +1980,7 @@ cc_prebuilt_library_shared {
 
 cc_prebuilt_library_shared {
     name: "libvvmediaeditor",
-    arch: {
+    target: {
         android_arm64: {
             srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvvmediaeditor.so"],
             shared_libs: [
