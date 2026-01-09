@@ -1,4 +1,21 @@
+// Copyright (C) 2026 The Android Open Source Project
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//      http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
 soong_namespace {
+	imports: [
+		"vendor/xiaomi/ginkgo",
+	],
 }
 
 android_app_import {
@@ -11,4 +28,1976 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libArcsoft_Avatar_Jni",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libArcsoft_Avatar_Jni.so"],
+            shared_libs: [
+                "libAvatarEngine",
+                "libjnigraphics",
+                "liblog",
+                "libandroid",
+                "libc",
+                "libm",
+                "libstdc++",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libAvatarEngine",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libAvatarEngine.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libandroid",
+                "libz",
+                "libEGL",
+                "libGLESv3",
+                "libstdc++",
+                "libm",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libCameraEffectJNI",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libCameraEffectJNI.so"],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libGLESv2",
+                "libGLESv3",
+                "libEGL",
+                "libandroid",
+                "libui",
+                "libjnigraphics",
+                "libgui",
+                "libjpeg",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libSNPE",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libSNPE.so"],
+            shared_libs: [
+                "libsymphony-cpu",
+                "libdl",
+                "liblog",
+                "libc++_shared",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarc_layer_sgl",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarc_layer_sgl.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_deflicker",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_deflicker.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_single_chart_calibration",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libarcsoft_single_chart_calibration.so"],
+            shared_libs: [
+                "libmpbase",
+                "liblog",
+                "libz",
+                "libstdc++",
+                "libm",
+                "libc",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_single_chart_calibration.so"],
+            shared_libs: [
+                "libmpbase",
+                "liblog",
+                "libz",
+                "libstdc++",
+                "libm",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_sn_mtk_apu",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_sn_mtk_apu.so"],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_super_night_raw_mpbase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_super_night_raw_mpbase.so"],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_super_night_raw_mtk",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_super_night_raw_mtk.so"],
+            shared_libs: [
+                "libmpbase",
+                "libarcsoft_sn_mtk_apu",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_supernight_jni",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_supernight_jni.so"],
+            shared_libs: [
+                "libmpbase",
+                "libarcsoft_sn_mtk_apu",
+                "libarcsoft_super_night_raw_mtk",
+                "libjnigraphics",
+                "liblog",
+                "libandroid",
+                "libc",
+                "libm",
+                "libstdc++",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libarcsoft_wideselfie",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libarcsoft_wideselfie.so"],
+            shared_libs: [
+                "libmpbase",
+                "liblog",
+                "libdl",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libc++_shared",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libc++_shared.so"],
+            shared_libs: [
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera2ndk",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera2ndk.so"],
+            shared_libs: [
+                "libbinder",
+                "liblog",
+                "libgui",
+                "libutils",
+                "libandroid_runtime",
+                "libcamera_client",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera2ndk.so"],
+            shared_libs: [
+                "libbinder",
+                "liblog",
+                "libgui",
+                "libutils",
+                "libandroid_runtime",
+                "libcamera_client",
+                "libstagefright_foundation",
+                "libcutils",
+                "libcamera_metadata",
+                "libmediandk",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_960_mpbase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_960_mpbase.so"],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_arcsoft_beautyshot",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_arcsoft_beautyshot.so"],
+            shared_libs: [
+                "libmpbase",
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_arcsoft_handgesture",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_arcsoft_handgesture.so"],
+            shared_libs: [
+                "libarc_layer_sgl",
+                "libhandengine.arcsoft",
+                "libmpbase",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_beauty_mpbase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_beauty_mpbase.so"],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_chroma_nr",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_chroma_nr.so"],
+            shared_libs: [
+                "libandroid",
+                "libandroid_runtime",
+                "libcutils",
+                "libgui",
+                "libhardware",
+                "libhidlbase",
+                "liblog",
+                "libmedia_jni",
+                "libnativehelper",
+                "libnativewindow",
+                "libsync",
+                "libui",
+                "libutils",
+                "android.hidl.token@1.0-utils",
+                "vendor.mediatek.hardware.camera.postproc@1.0",
+                "libmedia_jni_utils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_client",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera_client.so"],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libgui",
+                "libcamera_metadata",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_client.so"],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libbinder",
+                "libgui",
+                "libcamera_metadata",
+                "libnativewindow",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_handgesture_mpbase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_handgesture_mpbase.so"],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_metadata",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcamera_metadata.so"],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_metadata.so"],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_sound_effect",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_sound_effect.so"],
+            shared_libs: [
+                "libmisoundcamerasupport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera_wideselfie_mpbase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcamera_wideselfie_mpbase.so"],
+            shared_libs: [
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcameraservice",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcameraservice.so"],
+            shared_libs: [
+                "libbase",
+                "libexif",
+                "libui",
+                "liblog",
+                "libutilscallstack",
+                "libutils",
+                "libbinder",
+                "libcutils",
+                "libmedia",
+                "libmediautils",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libfmq",
+                "libgui",
+                "libhardware",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libjpeg",
+                "libmedia_omx",
+                "libmemunreachable",
+                "libsensorprivacy",
+                "libstagefright",
+                "libstagefright_foundation",
+                "libyuv",
+                "android.frameworks.cameraservice.common@2.0",
+                "android.frameworks.cameraservice.service@2.0",
+                "android.frameworks.cameraservice.device@2.0",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.camera.provider@2.5",
+                "android.hardware.camera.device@1.0",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.5",
+                "vendor.qti.hardware.camera.device@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcameraservice.so"],
+            shared_libs: [
+                "libbase",
+                "libexif",
+                "libui",
+                "liblog",
+                "libutilscallstack",
+                "libutils",
+                "libbinder",
+                "libcutils",
+                "libmedia",
+                "libmediautils",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libfmq",
+                "libgui",
+                "libhardware",
+                "libhwbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libjpeg",
+                "libmedia_omx",
+                "libmemunreachable",
+                "libsensorprivacy",
+                "libstagefright",
+                "libstagefright_foundation",
+                "libyuv",
+                "android.frameworks.cameraservice.common@2.0",
+                "android.frameworks.cameraservice.service@2.0",
+                "android.frameworks.cameraservice.device@2.0",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.camera.provider@2.5",
+                "android.hardware.camera.device@1.0",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.5",
+                "vendor.qti.hardware.camera.device@1.0",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcom.xiaomi.camera.algojni",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcom.xiaomi.camera.algojni.so"],
+            shared_libs: [
+                "libvndksupport",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libgui",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcom.xiaomi.camera.algojni.so"],
+            shared_libs: [
+                "libvndksupport",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libgui",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcom.xiaomi.camera.mianodejni",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libcom.xiaomi.camera.mianodejni.so"],
+            shared_libs: [
+                "libvndksupport",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libgui",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libxml2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcom.xiaomi.camera.mianodejni.so"],
+            shared_libs: [
+                "libvndksupport",
+                "libcamera_client",
+                "libcamera_metadata",
+                "libgui",
+                "libbinder",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libxml2",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libcom.xiaomi.camera.requestutil",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libcom.xiaomi.camera.requestutil.so"],
+            shared_libs: [
+                "libcrypto",
+                "libssl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libdeflicker_jni",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libdeflicker_jni.so"],
+            shared_libs: [
+                "libmpbase",
+                "libarcsoft_deflicker",
+                "liblog",
+                "libstdc++",
+                "libm",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libfenshen",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libfenshen.so"],
+            shared_libs: [
+                "libandroid",
+                "libmediandk",
+                "libSNPE",
+                "libaaudio",
+                "liblog",
+                "libGLESv3",
+                "libEGL",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libffmpeg",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libffmpeg.so"],
+            shared_libs: [
+                "libOpenSLES",
+                "libz",
+                "libandroid",
+                "libm",
+                "liblog",
+                "libc++_shared",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libhandengine.arcsoft",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libhandengine.arcsoft.so"],
+            shared_libs: [
+                "libmpbase",
+                "libarc_layer_sgl",
+                "liblog",
+                "libOpenCL",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_arcsoft_beautyshot",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_arcsoft_beautyshot.so"],
+            shared_libs: [
+                "libarcsoft_beautyshot",
+                "libmpbase",
+                "liblog",
+                "libandroid",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_blurbuster",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_blurbuster.so"],
+            shared_libs: [
+                "libblurbuster",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_chromaflash",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_chromaflash.so"],
+            shared_libs: [
+                "libchromaflash",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_dualcamera",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_dualcamera.so"],
+            shared_libs: [
+                "libdualcameraddm",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_filtergenerator",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_filtergenerator.so"],
+            shared_libs: [
+                "libfiltergenerator",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_hazebuster",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_hazebuster.so"],
+            shared_libs: [
+                "libhazebuster",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_imagecodec",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_imagecodec.so"],
+            shared_libs: [
+                "libion",
+                "libmedia",
+                "libcamera_client",
+                "libandroid_runtime",
+                "libnativehelper",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libgui",
+                "libui",
+                "libbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "vendor.mediatek.hardware.mms@1.0",
+                "vendor.mediatek.hardware.mms@1.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_jpegutil_xiaomi",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_jpegutil_xiaomi.so"],
+            shared_libs: [
+                "libion",
+                "libmedia",
+                "libcamera_client",
+                "libandroid_runtime",
+                "libnativehelper",
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libgui",
+                "libui",
+                "libbinder",
+                "libhidlbase",
+                "libhidltransport",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_load_serinum",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_load_serinum.so"],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_optizoom",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_optizoom.so"],
+            shared_libs: [
+                "liboptizoom",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_resource_drm",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_resource_drm.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libc++",
+                "libc",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_seestraight",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_seestraight.so"],
+            shared_libs: [
+                "libseestraight",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_sharpshooter",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_sharpshooter.so"],
+            shared_libs: [
+                "libseemore",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_sound_effect",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_sound_effect.so"],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_stillmore",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_stillmore.so"],
+            shared_libs: [
+                "libseemore",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_trueportrait",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_trueportrait.so"],
+            shared_libs: [
+                "libtrueportrait",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_truescanner_v2",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_truescanner_v2.so"],
+            shared_libs: [
+                "libtruescanner",
+                "libjnigraphics",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_ubifocus",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libjni_ubifocus.so"],
+            shared_libs: [
+                "libubifocus",
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libjni_wideselfie",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libjni_wideselfie.so"],
+            shared_libs: [
+                "libmpbase",
+                "libarcsoft_wideselfie",
+                "libjnigraphics",
+                "liblog",
+                "libandroid",
+                "libc",
+                "libm",
+                "libstdc++",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_avatarengine",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_avatarengine.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libandroid",
+                "libz",
+                "libEGL",
+                "libGLESv3",
+                "libstdc++",
+                "libm",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_bokeh_845_video",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_bokeh_845_video.so"],
+            shared_libs: [
+                "libSNPE",
+                "libsnpe_dsp_domains_v2",
+                "libOpenCL",
+                "liblog",
+                "libz",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_jni",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_jni.so"],
+            shared_libs: [
+                "libmimoji_avatarengine",
+                "libjnigraphics",
+                "liblog",
+                "libandroid",
+                "libc",
+                "libm",
+                "libstdc++",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_soundsupport",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_soundsupport.so"],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_tracking",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_tracking.so"],
+            shared_libs: [
+                "libc",
+                "libz",
+                "liblog",
+                "libdl",
+                "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmimoji_video2gif",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmimoji_video2gif.so"],
+            shared_libs: [
+                "libffmpeg",
+                "libmimoji_soundsupport",
+                "libmimoji_tracking",
+                "libOpenSLES",
+                "libGLESv3",
+                "libEGL",
+                "libandroid",
+                "liblog",
+                "libc++_shared",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmisoundcamerasupport",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmisoundcamerasupport.so"],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmiuinative",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmiuinative.so"],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmiuinative.so"],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_memory_allocator",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmorpho_memory_allocator.so"],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmorpho_memory_allocator.so"],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_panorama_gp3",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmorpho_panorama_gp3.so"],
+            shared_libs: [
+                "libjnigraphics",
+                "libGLESv1_CM",
+                "liblog",
+                "libandroid",
+                "libEGL",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmorpho_sensor_fusion",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libmorpho_sensor_fusion.so"],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmorpho_sensor_fusion.so"],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libmulti-wakeup-engine",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libmulti-wakeup-engine.so"],
+            shared_libs: [
+                "liblog",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "librecord_video",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/librecord_video.so"],
+            shared_libs: [
+                "libffmpeg",
+                "libOpenSLES",
+                "libGLESv3",
+                "libEGL",
+                "libandroid",
+                "liblog",
+                "libc++_shared",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libsubtitle_jni",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libsubtitle_jni.so"],
+            shared_libs: [
+                "libcrypto",
+                "libssl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libsubtitle_jni.so"],
+            shared_libs: [
+                "libcrypto",
+                "libssl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libsymphony-cpu",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libsymphony-cpu.so"],
+            shared_libs: [
+                "liblog",
+                "libc++_shared",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libtt_effect",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libtt_effect.so"],
+            shared_libs: [
+                "libm",
+                "libttffmpeg",
+                "liblog",
+                "libz",
+                "libGLESv2",
+                "libEGL",
+                "libjnigraphics",
+                "libdl",
+                "libandroid",
+                "libstdc++",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libtt_jni",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libtt_jni.so"],
+            shared_libs: [
+                "libcrypto",
+                "libssl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libtt_jni.so"],
+            shared_libs: [
+                "libcrypto",
+                "libssl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libttffmpeg",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttffmpeg.so"],
+            shared_libs: [
+                "libm",
+                "libz",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libttvebase",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvebase.so"],
+            shared_libs: [
+                "libttyuv",
+                "libtt_effect",
+                "libttffmpeg",
+                "libandroid",
+                "liblog",
+                "libGLESv2",
+                "libjnigraphics",
+                "libz",
+                "libEGL",
+                "libm",
+                "libstdc++",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libttvideoeditor",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvideoeditor.so"],
+            shared_libs: [
+                "libttvebase",
+                "libtt_effect",
+                "libttffmpeg",
+                "libttyuv",
+                "libandroid",
+                "libEGL",
+                "libGLESv2",
+                "libOpenSLES",
+                "liblog",
+                "libz",
+                "libm",
+                "libjnigraphics",
+                "libstdc++",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libttvideorecorder",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttvideorecorder.so"],
+            shared_libs: [
+                "libttffmpeg",
+                "libttyuv",
+                "libttvebase",
+                "libtt_effect",
+                "libz",
+                "liblog",
+                "libEGL",
+                "libGLESv2",
+                "libandroid",
+                "libjnigraphics",
+                "libOpenSLES",
+                "libm",
+                "libstdc++",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libttyuv",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libttyuv.so"],
+            shared_libs: [
+                "libstdc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libvideo_extra_color_converter",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvideo_extra_color_converter.so"],
+            shared_libs: [
+                "liblog",
+                "libjnigraphics",
+                "libandroid",
+                "libstdc++",
+                "libm",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libvideo_extra_interpolator",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvideo_extra_interpolator.so"],
+            shared_libs: [
+                "liblog",
+                "libjnigraphics",
+                "libandroid",
+                "libstdc++",
+                "libm",
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libvideoutils",
+    arch: {
+        android_arm: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm/libvideoutils.so"],
+            shared_libs: [
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libvvc++_shared",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvvc++_shared.so"],
+            shared_libs: [
+                "libc",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+}
+
+cc_prebuilt_library_shared {
+    name: "libvvmediaeditor",
+    arch: {
+        android_arm64: {
+            srcs: ["proprietary/system/priv-app/ANXCamera/lib/arm64/libvvmediaeditor.so"],
+            shared_libs: [
+                "libOpenSLES",
+                "libGLESv3",
+                "libEGL",
+                "libandroid",
+                "liblog",
+                "libc++_shared",
+                "libm",
+                "libdl",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
 }
